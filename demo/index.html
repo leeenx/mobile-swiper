@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" />
+<style>
+html, body {
+	font-size: 20px;
+	margin: 0; 
+	padding: 0;
+	background-color: #efefef;
+	 overflow: hidden; 
+}
+ul, li {
+	list-style: none;
+	margin: 0; 
+	padding: 0;  
+}
+ul {
+  position: relative;
+  width: 17.75rem;
+  height: 6.6rem;
+  margin: 1.3rem auto;
+}
+li {
+  position: absolute;
+  width: 5.4rem;
+  height: 6.6rem;
+  left: 50%;
+  margin-left: -2.7rem;
+}
+li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.15rem;
+}
+</style>
+</head>
+<body>
+<ul id="selector">
+  <li>
+    <img src="http://jdc.jd.com/img/216x264?color=fff&text=1">
+  </li>
+  <li>
+    <img src="http://jdc.jd.com/img/216x264?color=f00&text=1">
+  </li>
+  <li>
+    <img src="http://jdc.jd.com/img/216x264?color=ff0&text=1">
+  </li>
+  <li>
+    <img src="http://jdc.jd.com/img/216x264?color=f0f&text=1">
+  </li>
+  <li>
+    <img src="http://jdc.jd.com/img/216x264?color=333&text=1">
+  </li>
+</ul>
+<script src="mobile-swiper.js"></script>
+<script>
+new mobileSwiper("#selector");
+</script>
+</body>
+</html>
