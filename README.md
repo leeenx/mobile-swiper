@@ -32,3 +32,5 @@ DEMO中使用了 `touchstart` 和 touchend` 事件，所以仅适用于移动端
 </ul>
 ```
 
+**具体可以查看：**
+[DEMO](https://leeenx.github.io/mobile-swiper/index.html)
