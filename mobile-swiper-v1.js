@@ -44,16 +44,15 @@ var mobileSwiper = function(selector) {
 		return px / 40 + "rem"; 
 	}, 
 	css = [
-		"-webkit-transition: -webkit-transform .3s ease; z-index: 3; -webkit-transform: translate3d(0, 0, 10px) scale3d(1, 1, 1); visibility: visible;", 
-		"-webkit-transition: -webkit-transform .3s ease; z-index: 2; -webkit-transform: translate3d(" + rem(-148) + ", 0, 6px) scale3d(.8, .8, 1); visibility: visible;", 
-		"-webkit-transition: -webkit-transform .3s ease; z-index: 2; -webkit-transform: translate3d(" + rem(148) + ", 0, 6px) scale3d(.8, .8, 1); visibility: visible;", 
-		"-webkit-transition: -webkit-transform .3s ease; z-index: 1; -webkit-transform: translate3d(" + rem(-240) + ", 0, 2px) scale3d(.667, .667, 1); visibility: visible;", 
-		"-webkit-transition: -webkit-transform .3s ease; z-index: 1; -webkit-transform: translate3d(" + rem(240) + ", 0, 2px) scale3d(.667, .667, 1); visibility: visible;"
+		"-webkit-transition: -webkit-transform .3s ease; z-index: 3; -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); visibility: visible;", 
+		"-webkit-transition: -webkit-transform .3s ease; z-index: 2; -webkit-transform: translate3d(" + rem(-148) + ", 0, 0) scale3d(.8, .8, 1); visibility: visible;", 
+		"-webkit-transition: -webkit-transform .3s ease; z-index: 2; -webkit-transform: translate3d(" + rem(148) + ", 0, 0) scale3d(.8, .8, 1); visibility: visible;", 
+		"-webkit-transition: -webkit-transform .3s ease; z-index: 1; -webkit-transform: translate3d(" + rem(-240) + ", 0, 0) scale3d(.667, .667, 1); visibility: visible;", 
+		"-webkit-transition: -webkit-transform .3s ease; z-index: 1; -webkit-transform: translate3d(" + rem(240) + ", 0, 0) scale3d(.667, .667, 1); visibility: visible;"
 	]; 
 
 	this.init = function(list) {
 		this.container = list; 
-		this.container.style["-webkit-transform-style"] = "preserve-3d"; 
 		this.item = list.querySelectorAll("li"); 
 		for(var i=0; i<this.item.length; ++i) {this.item[i].style.visibility = "hidden"}
 		this.queue = function(len) { // 索引列表，用于处理切换的序号队列 
