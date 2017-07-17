@@ -49,16 +49,61 @@ li img {
   <li>
     <img src="http://jdc.jd.com/img/216x264?color=4186c7&text=3&textColor=ffffff">
   </li>
-  <!-- <li>
+  <li>
     <img src="http://jdc.jd.com/img/216x264?color=da8116&text=4&textColor=ffffff">
   </li>
   <li>
     <img src="http://jdc.jd.com/img/216x264?color=be4b46&text=5&textColor=ffffff">
-  </li> -->
+  </li>
 
 </ul>
 <script src="mobile-swiper.js"></script>
 <script>
+var request = function() {
+    var lhref = window.location.href, 
+        startindex = lhref.indexOf("?") + 1, 
+        endindex = lhref.indexOf('#') >- 1 ? lhref.indexOf('#') : lhref.length, 
+        parameters = lhref.substring(startindex,endindex), 
+        keyvalue = parameters.split("&"), 
+        requestPara = {};
+    if(parameters != lhref){
+      for(i in keyvalue)
+      {
+        var key = keyvalue[i].split("=");
+        requestPara[key[0]] = key[1]||'';
+      }
+    }
+    return function(name){
+      if(typeof(name) == 'string')
+        return requestPara[name];
+      else
+        return requestPara;
+    };
+  }(); 
+  var count = request("count") || 5; 
+  var html = [
+    '<li>\
+      <img src="http://jdc.jd.com/img/216x264?color=f5d328&text=1&textColor=ffffff">\
+    </li>',
+    '<li>\
+      <img src="http://jdc.jd.com/img/216x264?color=65ac3a&text=2&textColor=ffffff">\
+    </li>', 
+    '<li>\
+      <img src="http://jdc.jd.com/img/216x264?color=4186c7&text=3&textColor=ffffff">\
+    </li>', 
+    '<li>\
+      <img src="http://jdc.jd.com/img/216x264?color=da8116&text=4&textColor=ffffff">\
+    </li>', 
+    '<li>\
+      <img src="http://jdc.jd.com/img/216x264?color=be4b46&text=5&textColor=ffffff">\
+    </li>'
+  ]; 
+  var str = ''; 
+  while(0 < count) {
+    str += html[--count % 5]; 
+  }
+
+  selector.innerHTML = str; 
 new mobileSwiper("#selector");
 </script>
 </body>
