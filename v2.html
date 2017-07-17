@@ -84,8 +84,8 @@ li img {
     </li>'
   ]; 
   var str = ''; 
-  while(0 < count) {
-    str += html[--count % 5]; 
+  for(var i=0; i<count; ++i) {
+    str += html[i % 5]; 
   }
 
   selector.innerHTML = str; 
